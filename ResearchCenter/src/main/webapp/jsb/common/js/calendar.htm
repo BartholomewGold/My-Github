@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>日历 </TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT language=JavaScript>
+	var sTemp
+</SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY bgColor=#c0c0c0 leftMargin=0 topMargin=0 scroll=no>
+<TABLE cellSpacing=0 cellPadding=0 width=22 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <OBJECT id=cal style="LEFT: 0px; WIDTH: 200px; TOP: 0px; HEIGHT: 160px" 
+      type=text/x-scriptlet height=14 width=14 data="calendar1.htm" VIEWASTEXT></OBJECT></TD></TR>
+  <TR>
+    <TD><INPUT style="FONT-SIZE: 12px; WIDTH: 200px" onclick=exit1(); type=button value=清除 name=cmdClose></TD></TR></TBODY></TABLE>
+<P>
+<SCRIPT language=JavaScript event=onscriptletevent(name,eventdata) for=cal>
+	dateChange(eventdata);
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+window.onload = initWindow;
+function initWindow() {
+
+	var curDate = formatDate(new Date());
+	//cal.setCurDate(curDate);
+		
+	window.returnValue = window.dialogArguments;
+
+	//cal.setDate(window.dialogArguments);
+		
+	window.returnValue = window.dialogArguments;
+	
+}
+
+function formatDate(sDate) {
+	var sScrap = "";
+	var dScrap = new Date(sDate);
+	if (dScrap == "NaN") return sScrap;
+	
+	iDay = dScrap.getDate();
+	iMon = dScrap.getMonth();
+	iYea = dScrap.getFullYear();
+
+	sScrap = iYea + "/" + (iMon + 1) + "/" + iDay ;
+	return sScrap;
+}
+function dateChange(sValue) {
+	window.returnValue = sValue;
+	window.close();
+}
+function exit1(){
+        //alert("fff");
+        window.returnValue = "";
+	window.close();
+}
+// -->
+</SCRIPT>
+</P></BODY></HTML>

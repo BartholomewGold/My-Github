@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultdir="/sitemesh/">
+	<!-- Any urls that are excluded will never be decorated by Sitemesh -->
+	<excludes>
+	</excludes>
+<!-- 	自动加头尾 -->
+	<decorator name="sonlukMain" page="main">
+		<pattern>/account/*</pattern>
+	</decorator>
+
+</decorators>
